@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo de Craps</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Craps</h1>
+    <img src="dados.webp" alt="">
+    <button>Lançar dados</button>
+    <span></span>
+    <script>
+        var pontos = [];
+        const botao = document.getElementsByTagName('button');
+        const span = document.getElementsByTagName('span');
+        const lancar = () => {
+            min = Math.ceil(1);
+            max = Math.floor(6);
+            let n1 = Math.floor(Math.random() * (max - min + 1)) + min;
+            let n2 = Math.floor(Math.random() * (max - min + 1)) + min;
+            let soma = n1 + n2
+            console.log(soma)
+
+            switch (soma) {
+                case 2:
+                    if (pontos.length > 0) {
+                        span[0].innerText = 'Soma dos Dados: 2';
+                        pontos.push(2);
+                    } else {
+                        span[0].innerText = 'Soma dos Dados:2. Craps! Você Perdeu!';
+                        pontos.length = 0;
+                    }
+                    break;
+                case 3:
+                    if (pontos.length > 0) {
+                        span[0].innerText = 'Soma dos Dados: 3';
+                        pontos.push(3);
+                    } else {
+                        span[0].innerText = 'Soma dos Dados: 3. Craps! Você Perdeu!';
+                        pontos.length = 0;
+                    }
+                    break;
+                case 4:
+                    if (pontos.length>0){
+                        for (num of pontos) {
+                            console.log(`${num} num`);
+                        if (num == 4) {
+                            span[0].innerText = 'Soma dos Dados: 4. Pontos iguais! Você venceu!'
+                            pontos.length = 0;
+                        } else {
+                            span[0].innerText = 'Soma dos Dados: 4. '
+                            pontos.push(4);
+                            break;
+                        }
+                    } 
+                    }else{
+                        span[0].innerText = 'Soma dos Dados: 4. '
+                        pontos.push(4);
+                    };
+                    break;
+                case 5:
+                    if (pontos.length>0){
+                        for (num of pontos) {
+                            console.log(`${num} num`);
+                        if (num == 5) {
+                            span[0].innerText = 'Soma dos Dados: 5. Pontos iguais! Você venceu!'
+                            pontos.length = 0;
+                        } else {
+                            span[0].innerText = 'Soma dos Dados: 5. '
+                            pontos.push(5);
+                            break;
+                        }
+                    } 
+                    }else{
+                        span[0].innerText = 'Soma dos Dados: 5. '
+                        pontos.push(5);
+                    };
+                    break;
+                case 6:
+                    if (pontos.length>0){
+                        for (num of pontos) {
+                            console.log(`${num} num`);
+                        if (num == 6) {
+                            span[0].innerText = 'Soma dos Dados: 6. Pontos iguais! Você venceu!'
+                            pontos.length = 0;
+                        } else {
+                            span[0].innerText = 'Soma dos Dados: 6. '
+                            pontos.push(6);
+                            break;
+                        }
+                    } 
+                    }else{
+                        span[0].innerText = 'Soma dos Dados: 6. '
+                        pontos.push(6);
+                    };
+                    break;
+                case 7:
+                    if (pontos.length > 0) {
+                        span[0].innerText = 'Soma dos Dados: 7. Você perdeu!';
+                        pontos.length = 0;
+                    } else {
+                        span[0].innerText = 'Soma dos Dados: 7. Você venceu!';
+                    }
+                    break;
+                case 8:
+                    if (pontos.length>0){
+                        for (num of pontos) {
+                            console.log(`${num} num`);
+                        if (num == 8) {
+                            span[0].innerText = 'Soma dos Dados: 8. Pontos iguais! Você venceu!'
+                            pontos.length = 0;
+                        } else {
+                            span[0].innerText = 'Soma dos Dados: 8. '
+                            pontos.push(8);
+                            break;
+                        }
+                    } 
+                    }else{
+                        span[0].innerText = 'Soma dos Dados: 8. '
+                        pontos.push(8);
+                    };
+                    break;
+                case 9:
+                    if (pontos.length>0){
+                        for (num of pontos) {
+                            console.log(`${num} num`);
+                        if (num == 9) {
+                            span[0].innerText = 'Soma dos Dados: 9. Pontos iguais! Você venceu!'
+                            pontos.length = 0;
+                        } else {
+                            span[0].innerText = 'Soma dos Dados: 9. '
+                            pontos.push(9);
+                            break;
+                        }
+                    } 
+                    }else{
+                        span[0].innerText = 'Soma dos Dados: 9. '
+                        pontos.push(9);
+                    };
+                    break;
+                case 10:
+                    if (pontos.length>0){
+                        for (num of pontos) {
+                            console.log(`${num} num`);
+                        if (num == 10) {
+                            span[0].innerText = 'Soma dos Dados: 10. Pontos iguais! Você venceu!'
+                            pontos.length = 0;
+                        } else {
+                            span[0].innerText = 'Soma dos Dados: 10. '
+                            pontos.push(10);
+                            break;
+                        }
+                    } 
+                    }else{
+                        span[0].innerText = 'Soma dos Dados: 10. '
+                        pontos.push(10);
+                    };
+                    break;
+                case 11:
+                    if (pontos.length > 0) {
+                        span[0].innerText = 'Soma dos Dados: 11'
+                        pontos.push(11);
+                    } else {
+                        span[0].innerText = 'Soma dos Dados: 11. Você venceu!'
+                    }
+                    break;
+                case 12:
+                    if (pontos.length > 0) {
+                        span[0].innerText = 'Soma dos Dados: 12'
+                        pontos.push(12);
+                    } else {
+                        span[0].innerText = 'Soma dos Dados 12. Craps! Você Perdeu!'
+                    }
+                    break;
+            }
+        };
+
+        botao[0].addEventListener('click', lancar);
+    </script>
+</body>
+
+</html>
